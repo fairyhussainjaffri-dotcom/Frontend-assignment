@@ -1,0 +1,255 @@
+
+    
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SORATECH Internship Finder</title>
+
+  <style>
+    /* ======== RESET ======== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      background-color: #ffffff;
+      color: #333;
+    }
+
+    /* ======== NAVIGATION ======== */
+    nav {
+      background-color: #fff;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 70px;
+      position: sticky;
+ top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      color: #23a15f;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #23a15f;
+    }
+
+    .register-btn {
+      background-color: #23a15f;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.3s;
+  }
+
+    .register-btn:hover {
+      background-color: #1e8c53;
+    }
+
+    /* ======== HERO SECTION ======== */
+    .hero {
+      background: url('https://images.unsplash.com/photo-1521790361267-7084d6e1e43c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+      height: 70vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      position: relative;
+      color: #fff;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      font-weight: 700;
+      margin-bottom: 15px;
+  }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+      color: #f1f1f1;
+    }
+
+    /* ======== SEARCH BAR ======== */
+    .search-bar {
+      display: flex;
+      background-color: white;
+      border-radius: 50px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .search-bar input {
+      border: none;
+      outline: none;
+      padding: 12px 20px;
+      flex: 1;
+      font-size: 15px;
+    }
+
+    .search-bar button {
+      background-color: #23a15f;
+      color: white;
+      border: none;
+      padding: 12px 30px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .search-bar button:hover {
+      background-color: #1e8c53;
+    }
+  /* ======== INTERNSHIP CARDS ======== */
+    .cards-section {
+      padding: 60px 80px;
+      background-color: #f9f9f9;
+      text-align: center;
+    }
+
+    .cards-section h2 {
+      margin-bottom: 40px;
+      font-size: 28px;
+      color: #333;
+    }
+
+    .cards {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      width: 280px;
+      padding: 20px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+      width: 120px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 5px;
+      font-size: 18px;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .card button {
+      background-color: #23a15f;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: 0.3s;
+    }
+
+    .card button:hover {
+      background-color: #1e8c53;
+    }
+
+    /* ======== FOOTER ======== */
+    footer {
+      background-color: #1b1f3b;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .hero h1 {
+        font-size: 28px;
+      }
+      .search-bar {
+        flex-direction: column;
+        border-radius: 10px;
+      }
+      .search-bar button {
+        border-radius: 0 0 10px 10px;
+      }
+      .cards {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">SORATECH</div>
+    <div class="nav-links">
+      <a href="#">Explore Internships</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Login</a>
+      <button class="register-btn">Register</button>
+    </div

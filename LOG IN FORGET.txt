@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-container {
+      background-color: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 320px;
+    }
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .login-container input[type="text"],
+    .login-container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .login-container .options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 10px 0;
+    }
+    .login-container .options label {
+      font-size: 14px;
+    }
+    .login-container .options a {
+      font-size: 14px;
+      color: #007BFF;
+      text-decoration: none;
+    }
+    .login-container input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .login-container input[type="submit"]:hover {
+      background-color: #45a049;
+    }
+    .social-login {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .social-login button {
+      margin: 5px;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .google-btn {
+      background-color: #db4437;
+      color: white;
+    }
+    .facebook-btn {
+      background-color: #3b5998;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form action="/login" method="post">
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+
+      <div class="options">
+        <label><input type="checkbox" name="remember"> Remember Me</label>
+        <a href="/forgot-password">Forgot Password?</a>
+      </div>
+
+      <input type="submit" value="Login">
+    </form>
+
+    <div class="social-login">
+      <p>Or login with:</p>
+      <button class="google-btn">Google</button>
+      <button class="facebook-btn">Facebook</button>
+    </div>
+  </div>
+</body>
+</html>
